@@ -9,7 +9,7 @@ const Lang = Language.getString('memes');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'meme ?(.*)', fromMe: true, desc: Lang.MEMES_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'meme ?(.*)', fromMe: true, desc: Lang.MEMES_DESC}, (async (message, match) => {   
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text);
         var topText, bottomText;
@@ -22,32 +22,32 @@ if (Config.WORKTYPE == 'private') {
             topText = match[1];
             bottomText = '';
         }
-
+    
 	    var info = await message.reply(Lang.DOWNLOADING);
-
+	
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
                 id: message.reply_message.id
             },
             message: message.reply_message.data.quotedMessage
-        });
-
+        }); 
+    
 	    memeMaker({
-            image: location,
-            outfile: 'bat-meme.png',
+            image: location,         
+            outfile: 'gaia-meme.png',
             topText: topText,
             bottomText: bottomText,
         }, async function(err) {
             if(err) throw new Error(err)
-            await message.client.sendMessage(message.jid, fs.readFileSync('bat-meme.png'), MessageType.image, {filename: 'bat-meme.png', mimetype: Mimetype.png, caption: 'Made by WhatsBAT'});
-            await info.delete();
+            await message.client.sendMessage(message.jid, fs.readFileSync('gaia-meme.png'), MessageType.image, {filename: 'gaia-meme.png', mimetype: Mimetype.png, caption: 'Made by WhatsGAIA'});
+            await info.delete();    
         });
     }));
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'meme ?(.*)', fromMe: false, desc: Lang.MEMES_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'meme ?(.*)', fromMe: false, desc: Lang.MEMES_DESC}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text);
         var topText, bottomText;
@@ -60,29 +60,29 @@ else if (Config.WORKTYPE == 'public') {
             topText = match[1];
             bottomText = '';
         }
-
+    
 	    var info = await message.reply(Lang.DOWNLOADING);
-
+	
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
                 id: message.reply_message.id
             },
             message: message.reply_message.data.quotedMessage
-        });
-
+        }); 
+    
 	    memeMaker({
-            image: location,
-            outfile: 'bat-meme.png',
+            image: location,         
+            outfile: 'gaia-meme.png',
             topText: topText,
             bottomText: bottomText,
         }, async function(err) {
             if(err) throw new Error(err)
-            await message.client.sendMessage(message.jid, fs.readFileSync('bat-meme.png'), MessageType.image, {filename: 'bat-meme.png', mimetype: Mimetype.png, caption: 'Made by WhatsBAT'});
-            await info.delete();
+            await message.client.sendMessage(message.jid, fs.readFileSync('gaia-meme.png'), MessageType.image, {filename: 'gaia-meme.png', mimetype: Mimetype.png, caption: 'Made by WhatsGAIA'});
+            await info.delete();    
         });
     }));
-    Asena.addCommand({pattern: 'meme ?(.*)', fromMe: true, desc: Lang.MEMES_DESC, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'meme ?(.*)', fromMe: true, desc: Lang.MEMES_DESC, dontAddCommandList: true}, (async (message, match) => {   
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text);
         var topText, bottomText;
@@ -95,26 +95,26 @@ else if (Config.WORKTYPE == 'public') {
             topText = match[1];
             bottomText = '';
         }
-
+    
 	    var info = await message.reply(Lang.DOWNLOADING);
-
+	
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
                 id: message.reply_message.id
             },
             message: message.reply_message.data.quotedMessage
-        });
-
+        }); 
+    
 	    memeMaker({
-            image: location,
-            outfile: 'bat-meme.png',
+            image: location,         
+            outfile: 'gaia-meme.png',
             topText: topText,
             bottomText: bottomText,
         }, async function(err) {
             if(err) throw new Error(err)
-            await message.client.sendMessage(message.jid, fs.readFileSync('bat-meme.png'), MessageType.image, {filename: 'bat-meme.png', mimetype: Mimetype.png, caption: 'Made by WhatsBAT'});
-            await info.delete();
+            await message.client.sendMessage(message.jid, fs.readFileSync('gaia-meme.png'), MessageType.image, {filename: 'gaia-meme.png', mimetype: Mimetype.png, caption: 'Made by WhatsGAIA'});
+            await info.delete();    
         });
     }));
 }

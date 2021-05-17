@@ -21,13 +21,13 @@ const heroku = new Heroku({
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, warn: Lang.WARN}, (async (message, match) => {
-    if (match[1] === '') return await message.sendMessage(Lang.NEED_URL + '.install https://gist.github.com/username/plugin')
+    if (match[1] === '') return await message.sendMessage(Lang.NEED_URL + '.install https://gist.github.com/valco72/pluginlink')
     try {
         var url = new URL(match[1]);
     } catch {
         return await message.sendMessage(Lang.INVALID_URL);
     }
-
+    
     if (url.host === 'gist.github.com') {
         url.host = 'gist.githubusercontent.com';
         url = url.toString() + '/raw'
@@ -49,13 +49,13 @@ Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DES
         try {
             require('./' + plugin_name);
         } catch (e) {
-            fs.unlinkSync('/root/WhatsBAT/plugins/' + plugin_name + '.js')
+            fs.unlinkSync('/root/WhatsGAIA/plugins/' + plugin_name + '.js')
             return await message.sendMessage(Lang.INVALID_PLUGIN + ' ```' + e + '```');
         }
 
         await Db.installPlugin(url, plugin_name);
         await message.client.sendMessage(message.jid, Lang.INSTALLED, MessageType.text);
-        if (!match[1].includes('phaticusthiccy')) {
+        if (!match[1].includes('valco72')) {
             await new Promise(r => setTimeout(r, 400));
             await message.client.sendMessage(message.jid, Lang.UNOFF, MessageType.text);
         }
@@ -89,9 +89,9 @@ Asena.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_
         delete require.cache[require.resolve('./' + match[1] + '.js')]
         fs.unlinkSync('./plugins/' + match[1] + '.js');
         await message.client.sendMessage(message.jid, Lang.DELETED, MessageType.text);
-
+        
         await new Promise(r => setTimeout(r, 1000));
-
+    
         await message.sendMessage(NLang.AFTER_UPDATE);
 
         console.log(baseURI);

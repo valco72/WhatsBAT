@@ -8,9 +8,9 @@ const Lang = Language.getString('ocr');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'ocr ?(.*)', fromMe: true, desc: Lang.OCR_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'ocr ?(.*)', fromMe: true, desc: Lang.OCR_DESC}, (async (message, match) => { 
 
-        if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);
+        if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);    
 	var info = await message.reply(Lang.DOWNLOADING);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
@@ -30,7 +30,7 @@ if (Config.WORKTYPE == 'private') {
         try {
             var result = await tesseract.recognize(location, {
                 lang: dil[2]
-            });
+            });    
         } catch (e) {
             return await message.reply(Lang.ERROR.format(e));
         }
@@ -45,9 +45,9 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'ocr ?(.*)', fromMe: false, desc: Lang.OCR_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'ocr ?(.*)', fromMe: false, desc: Lang.OCR_DESC}, (async (message, match) => { 
 
-        if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);
+        if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);    
 	var info = await message.reply(Lang.DOWNLOADING);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
@@ -67,7 +67,7 @@ else if (Config.WORKTYPE == 'public') {
         try {
             var result = await tesseract.recognize(location, {
                 lang: dil[2]
-            });
+            });    
         } catch (e) {
             return await message.reply(Lang.ERROR.format(e));
         }
@@ -79,9 +79,9 @@ else if (Config.WORKTYPE == 'public') {
 
         return await message.reply(Lang.RESULT.format(dil[2], result));
     }));
-    Asena.addCommand({pattern: 'ocr ?(.*)', fromMe: true, desc: Lang.OCR_DESC, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'ocr ?(.*)', fromMe: true, desc: Lang.OCR_DESC, dontAddCommandList: true}, (async (message, match) => { 
 
-        if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);
+        if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);    
 	var info = await message.reply(Lang.DOWNLOADING);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
@@ -101,7 +101,7 @@ else if (Config.WORKTYPE == 'public') {
         try {
             var result = await tesseract.recognize(location, {
                 lang: dil[2]
-            });
+            });    
         } catch (e) {
             return await message.reply(Lang.ERROR.format(e));
         }

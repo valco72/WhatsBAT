@@ -14,7 +14,7 @@ Asena.addCommand({ pattern: 'notes', fromMe: true, desc: Lang.NOTES_USAGE }, asy
     const notes = []
     _notes.map(note => {
         if (!note.note.includes('IMG;;;')) {
-            notes.push('BAT 📜' + note.note)
+            notes.push('📜' + note.note)
         }
     })
 
@@ -96,3 +96,4 @@ Asena.addCommand({ pattern: 'deleteNotes', fromMe: true, desc: Lang.DELETE_USAGE
 
     return await message.sendMessage(successfullMessage(Lang.SUCCESSFULLY_DELETED))
 })
+
