@@ -16,22 +16,22 @@ class Message extends Base {
         this.unreadCount = data.unreadCount;
         this.timestamp = typeof(data.messageTimestamp) === 'object' ? data.messageTimestamp.low : data.messageTimestamp;
         this.data = data;
-
+        
         if (data.message.hasOwnProperty('extendedTextMessage') &&
-                data.message.extendedTextMessage.hasOwnProperty('contextInfo') === true &&
-                data.message.extendedTextMessage.contextInfo.hasOwnProperty('quotedMessage')) {
+                data.message.extendedTextMessage.hasOwnProperty('contextInfo') === true && 
+                data.message.extendedTextMessage.contextInfo.hasOwnProperty('quotedMessage')) { 
             this.reply_message = new ReplyMessage(this.client, data.message.extendedTextMessage.contextInfo); } else {
                 this.reply_message = false;
             }
-
+        
         if (data.message.hasOwnProperty('extendedTextMessage') &&
-        data.message.extendedTextMessage.hasOwnProperty('contextInfo') === true &&
+        data.message.extendedTextMessage.hasOwnProperty('contextInfo') === true && 
         data.message.extendedTextMessage.contextInfo.hasOwnProperty('mentionedJid')) {
             this.mention = data.message.extendedTextMessage.contextInfo.mentionedJid;
         } else {
             this.mention = false;
         }
-
+        
         return super._patch(data);
     }
 

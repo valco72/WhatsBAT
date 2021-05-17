@@ -21,13 +21,13 @@ class Image extends Base {
         this.width = data.message.imageMessage.width;
         this.mediaKey = data.message.imageMessage.mediaKey;
         this.data = data;
-
-        if (data.message.imageMessage.hasOwnProperty('contextInfo') && data.message.contextInfo.quotedMessage) {
+        
+        if (data.message.imageMessage.hasOwnProperty('contextInfo') && data.message.contextInfo.quotedMessage) { 
             this.reply_message = new ReplyMessage(this.client, data.message.imageMessage.contextInfo); }
         else {
             this.reply_message = false;
         }
-
+        
         return super._patch(data);
     }
 

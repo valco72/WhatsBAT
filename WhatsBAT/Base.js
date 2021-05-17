@@ -8,7 +8,7 @@ class Base {
     _clone() {
         return Object.assign(Object.create(this), this);
     }
-
+    
     _patch(data) { return data; }
 }
 

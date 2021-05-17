@@ -21,13 +21,13 @@ class Video extends Base {
         this.width = data.message.videoMessage.width;
         this.mediaKey = data.message.videoMessage.mediaKey;
         this.data = data;
-
-        if (data.message.videoMessage.hasOwnProperty('contextInfo') && data.message.contextInfo.quotedMessage) {
+        
+        if (data.message.videoMessage.hasOwnProperty('contextInfo') && data.message.contextInfo.quotedMessage) { 
             this.reply_message = new ReplyMessage(this.client, data.message.videoMessage.contextInfo); }
         else {
             this.reply_message = false;
         }
-
+        
         return super._patch(data);
     }
 
