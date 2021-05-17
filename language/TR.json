@@ -3,8 +3,8 @@
     "LANGUAGE": "Türkçe",
     "LANGCODE": "tr",
     "AUTHOR": "AsenaDev",
-    "STRINGS": {
-        "_bat": {
+    "STRINGS": { 
+        "_gaia": {
             "COMMAND": "Komut",
             "DESC": "Açıklama",
             "EXAMPLE": "Örnek",
@@ -12,7 +12,7 @@
             "WARN": "Uyarı"
         },
         "_plugin": {
-            "INSTALL_DESC": "Plugin yükler.\n⌨️ Örnek: .install https://gist.github.com/username/plugin",
+            "INSTALL_DESC": "Plugin yükler.\n⌨️ Örnek: .install https://gist.github.com/valco72/pluginlink",
             "NEED_URL": "Lütfen bir URL giriniz! Örnek:",
             "INVALID_URL": "```Lütfen bir geçerli URL giriniz!```",
             "INVALID_PLUGIN": "*❌ Plugininiz hatalı!*\n*Hata:*",
@@ -24,8 +24,8 @@
             "NEED_PLUGIN": "```Lütfen bir Plugin giriniz! Örnek: .plugin test```",
             "NOT_FOUND_PLUGIN": "```Böyle bir plugin belki yüklediniz, belki de yüklemediniz. Ama şu an olmadığı kesin.```",
             "DELETED": "*✅ Modül başarıyla silindi!*",
-            "UNOFF": "⚠️ *Dikkat!* \n*Yüklediğiniz plugin resmi değildir!*",
-            "WARN": "Pluginleri sadece t.me/WhatsBAT kanalından alın."
+            "UNOFF": "⚠️ *Dikkat!* \n*Yüklendiğiniz plugin resmi değildir!*",
+            "WARN": "Pluginleri sadece t.me/remasterplugin kanalından alın."
         },
         "admin": {
             "BAN_DESC": "Gruptan kişi banlar. Yanıt verin ya da komutun yanına kişiyi etiketleyin.",
@@ -45,7 +45,7 @@
             "UNMUTE_DESC": "Grubu sohbetini açar. Herkes mesaj gönderebilir.",
             "UNMUTED": "```Grup sohbeti açıldı!```",
             "INVITE_DESC": "Grubun davet linkini getirir.",
-            "INVITE": "```Davet linki:```"
+            "INVITE": "```Davet linki:```" 
         },
         "locate": {
             "L_DESC": "Konumunuzu gönderir.",
@@ -75,10 +75,10 @@
             "MUST_TEXT": "```Lütfen herhangi bir mesajı yanıtlayın```"
         },
         "heroku": {
-            "RESTART_DESC": "WhatsBAT'ı yeniden başlatın",
+            "RESTART_DESC": "WhatsGAIA'yı yeniden başlatın",
             "RESTART_MSG": "```Yeniden Başlatılıyor...```",
-            "SHUTDOWN_DESC": "WhatsBAT'ı kapatır.",
-            "SHUTDOWN_MSG": "*Belki birgün tekrar görüşebiliriz..\nHoşcakal Sahip..*\n```BAT Kapatılıyor... ⛔```",
+            "SHUTDOWN_DESC": "WhatsGAIA'yı kapatır.",
+            "SHUTDOWN_MSG": "*Belki birgün tekrar görüşebiliriz..\nHoşcakal Sahip..*\n```Asena Kapatılıyor... ⛔```",
             "DYNO_DESC": "Heroku dyno kullanımını kontrol edin",
             "DYNO_TOTAL": "```Toplam Kota```",
             "DYNO_USED": "```Kullanılan kota```",
@@ -96,7 +96,7 @@
             "DEGİS_NONE": "```Lütfen Herhangi Bir Modül İsmi Girin!``` \n\n*.degis afk*\n*.degis alive* _({pp}, {info}, {version}, {plugin})_\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
             "WR": "*Lütfen geçerli olan modülleri kullanın!*",
             "DEGİS_DESC": "Alive, afk gibi modüllerin metinlerini değiştirir.",
-            "NOT_FOUND": "```bu anahtar için sonuç bulunamadı```"
+            "NOT_FOUND": "```bu anahtar için sonuç bulunamadı```"           
         },
         "filters": {
             "FILTER_DESC": "Filtre ekler. Yazdığınız filtreyi birisi yazarsa yazdığınıı cevabı gönderir. Eğer sadece filter yazarsanız eklediğiniz filtreleri getirir.\n⌨️ Örnek: .filter ”merhaba” ”merhaba#nasılsın?”",
@@ -147,7 +147,7 @@
         },
         "profile": {
             "KICKME_DESC": "Yazdığınız gruptan sizi çıkarır.",
-            "KICKME": "```Güle güle. WhatsBAT gidiyor! 🤠```",
+            "KICKME": "```Güle güle. Ben gidiyorum 🤠```",
             "PP_DESC": "Yanıt verdiğiniz fotoğrafı profil fotoğrafınız yapar.",
             "NEED_PHOTO": "*Bana bir fotoğraf ver!*",
             "PPING": "```Profil fotoğrafı yapılıyor...```",
@@ -233,7 +233,7 @@
             "LOG": "Yanıtladığınız mesajı özel numaranıza kaydeder",
             "REPLY": "*Lütfen Herhangi Bir Mesajı Yanıtlayın!*",
             "ANIM": "Hareketli stickerleri desteklemez!",
-            "HEAD": "```===== [BAT LOGGED MESSAGE] =====```\n\n",
+            "HEAD": "```===== [LOGGED MESSAGE] =====```\n\n",
             "USER": " Numaralı Kullanıcıdan \n",
             "FROM": " ID'li Gruptan, ",
             "MSG": "Mesaj: \n\n",
@@ -249,7 +249,7 @@
             "UPDATED": "*✅ Güncelleme başarılı oldu!*",
             "IN_AF": "*Lütfen* _HEROKU_APP_NAME_ *ile* _app name_'nin *aynı olduğuna emin olun.* \n\n*Bilgiler doğru ise lütfen* _HEROKU_API_KEY_'inizi *yenileyin.*",
             "UPDATED_LOCAL": "*✅ Güncelleme başarılı oldu!*",
-            "AFTER_UPDATE": "*💬 WhatsBAT Yeniden Başlatılıyor*",
+            "AFTER_UPDATE": "*💬 WhatsGAIA Yeniden Başlatılıyor*",
             "IN_AF": "*Lütfen* ```HEROKU_APP_NAME``` *ile* ```app name```'nizin *aynı olduğuna emin olun.*\n*Bu iki değer aynı ise lütfen* ```HEROKU_API_KEY```'inizi *değiştirin!*\n\n_Bu ayarlara ulaşmak için Heroku >> Uygulama >> Settings >> Reavel Config Vars adımlarını takip edin._\n_API keyinizi yenilemek için Heroku >> Account >> API Key kısmından yeniledikten sonra eski API key ile değiştirin._"
         },
         "weather": {
@@ -286,7 +286,7 @@
             "XMEDİA_DESC": "İçerisinde 30’dan fazla medya aracının bulduğu bir plugin.",
             "T_FALSE": "```❌ Yanlış Blend Efekti Girildi!```\n```🔎 Varolan Komutlar:```\n\n*$dodge* - Videoya pembe renk filtresi uygular.\n*$multiply* - Videoya yeşil renk filtresi uygular.\n*$grainmerge* - Videonun kontrast değerlerini arttırır.\n*$and* - Videonun hıza göre siyah yıldırım efekti uygular.\n*$or* - Videonun hızına göre beyaz yıldırım efekti uygular.\n*$burn* - Videoya yeşil kontrast uygular.\n*$difference* - Videoya yeşil kabartma uygulayarak farklılıkları gösterir.\n*$grainextract* - Videoya gri kabartma uygulayarak farklılıkları gösterir.\n*$divide* - Videoya pembe kabartma uygulayarak farklılıkları gösterir.\n*$xor* - Videoya hem yeşil kabartma hemde yıldırım efekti uygular.\n*$hardmix* - Videonun renklerini sarı ve kırmızı tonuna mix eder.\n*$negation* - Videonun dinamiklerini pembeye çevirir.",
             "T_NOT": "```💭 Herhangi Bir Blend Efekti Girmen Gerekiyor!\n```🔎 Varolan Komutlar:```\n\n*$dodge* - Videoya pembe renk filtresi uygular.\n*$multiply* - Videoya yeşil renk filtresi uygular.\n*$grainmerge* - Videonun kontrast değerlerini arttırır.\n*$and* - Videonun hıza göre siyah yıldırım efekti uygular.\n*$or* - Videonun hızına göre beyaz yıldırım efekti uygular.\n*$burn* - Videoya yeşil kontrast uygular.\n*$difference* - Videoya yeşil kabartma uygulayarak farklılıkları gösterir.\n*$grainextract* - Videoya gri kabartma uygulayarak farklılıkları gösterir.\n*$divide* - Videoya pembe kabartma uygulayarak farklılıkları gösterir.\n*$xor* - Videoya hem yeşil kabartma hemde yıldırım efekti uygular.\n*$hardmix* - Videonun renklerini sarı ve kırmızı tonuna mix eder.\n*$negation* - Videonun dinamiklerini pembeye çevirir.",
-            "T_DESC": "Videolara seçilen TBlend efektini uygular."
+            "T_DESC": "Videolara seçilen TBlend efektini uygular." 
         },
         "mute": {
             "BİRMUTE": "*Grup 1 dakika süreyle susturuldu!*",
@@ -441,7 +441,7 @@
             "SAVE_USAGE": "Yanıtladığınız mesajı yada resmi nota kaydeder.",
             "REPLY": "Lütfen bir mesaj alıntılayın veya .save <notunuz> şeklinde kullanın.",
             "SUCCESSFULLY_ADDED": "Notunuz başarılı bir şekilde kaydedildi, .notes yazarak notlarınıza ulaşabilirsiniz",
-            "UNSUCCESSFUL": "Notunuzu kaydederken bir hatayla karşılaştık, lütfen tekrar deneyin. Eğer sorun devam ediyorsa lütfen WhatsBAT geliştiricileriyle iletişime geçin.",
+            "UNSUCCESSFUL": "Notunuzu kaydederken bir hatayla karşılaştık, lütfen tekrar deneyin. Eğer sorun devam ediyorsa lütfen WhatsGAIA geliştiricileriyle iletişime geçin.",
             "DELETE_USAGE": "Kaydettiğiniz *tüm* notlarınızı siler.",
             "SUCCESSFULLY_DELETED": "Tüm notlarınız başarılı bir şekilde silindi."
         },
@@ -462,7 +462,7 @@
             "NOT_FOUND": "*Medya Bulunamadı!*"
         },
         "github": {
-            "GİTHUB_DESC": "Verilen kullanıcı adından github bilgilerini toplar.\n⌨️ Örnek: .github phaticusthiccy",
+            "GİTHUB_DESC": "Verilen kullanıcı adından github bilgilerini toplar.\n⌨️ Örnek: .github valco72",
             "REPLY": "```Herhangi Bir Kullanıcı Adı Girmen Gerekiyor!```",
             "NOT": "```Kullanıcı Bulunamadı!```",
             "FOLLOWERS": "Takipçiler:",
