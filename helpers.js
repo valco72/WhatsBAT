@@ -1,11 +1,11 @@
 function successfullMessage(msg) {
-    return "✅ *WhatsBAT*:  ```" + msg + "```"
+    return "✅ *WhatsGAIA*:  ```" + msg + "```"
 }
 function errorMessage(msg) {
-    return "🛑 *WhatsBAT*:  ```" + msg + "```"
+    return "🛑 *WhatsGAIA*:  ```" + msg + "```"
 }
 function infoMessage(msg) {
-    return "⏺️ *WhatsBAT*:  ```" + msg + "```"
+    return "⏺️ *WhatsGAIA*:  ```" + msg + "```"
 }
 
 

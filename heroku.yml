@@ -1,5 +1,5 @@
 build:
   docker:
-      worker: /WhatsBAT/Dockerfile
+      worker: /whatsgaia/Dockerfile
 run:
    worker: npm start

@@ -1,29 +1,29 @@
 {
-  "name": "WhatsBAT",
-  "version": "1.0",
-  "description": "WhatsBAT - a Whatsapp userbot, which makes whatsapp funny.",
-  "main": "./WhatsBAT/bot.js",
+  "name": "WhatsGAIA",
+  "version": "1.0 GAIA EDITION",
+  "description": "WhatsGAIA",
+  "main": "./WhatsGAIA/bot.js",
   "scripts": {
     "start": "supervisor -s bot.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/valco72/WhatsBAT.git"
+    "url": "git+https://github.com/valco72/WhatsGAIA.git"
   },
   "keywords": [
     "whatsapp",
     "bot",
     "ai",
-    "bat",
-    "WhatsBAT"
+    "gaia",
+    "WhatsGAIA"
   ],
-  "author": "AsenaDev / valco72",
-  "developer": "AsenaDev / Mockir",
+  "author": "AsenaDev / BAT",
+  "developer": "AsenaDev / @valco72",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/valco72/WhatsBAT/issues"
+    "url": "https://discord.gg/gaia"
   },
-  "homepage": "https://github.com/valco72/WhatsBAT#readme",
+  "homepage": "https://github.com/valco72/WhatsGAIA",
   "dependencies": {
     "@adiwajshing/baileys": "3.5.0",
     "@lh2020/speedtest-net": "^2.1.1",
